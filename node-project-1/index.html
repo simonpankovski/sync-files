@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Sync</p>
+    <!-- <form method="POST" action="localhost:4000"></form>
+  <input type="text" class="url">
+  <p>New value</p>
+  <input type="text" class="newValue"> -->
+    <button id="button" type="submit">Send</button>
+    <script>
+      // document.querySelector("#button").addEventListener("click",fetch('localhost:4000/port',{method:"POST",body: JSON.stringify({port:4000})}.then(res=>console.log(res))))
+
+      //  document.querySelector("form").addEventListener("onsubmit",(ev)=>{
+
+      //   form.action = "localhost:"+document.querySelector(".port").value;
+      //   console.log(form.action)
+      //  })
+
+      document.querySelector("button").addEventListener("click", e => {
+        fetch("http://localhost:3000/zip",{method:"GET"})
+
+        // document.querySelector("form").submit()
+        // let port = document.querySelector(".url").value;
+        // let inp = document.querySelector(".newValue").value;
+        //   fetch("http://localhost:"+port,{method: 'POST',mode:'no-cors', headers: [
+        //   ['Content-Type', 'application/x-www-form-urlencoded'],
+        //   ['Content-Type', 'multipart/form-data'],
+        //   ['Content-Type', 'text/plain'],
+        // ], body: 'url='+inp}).then(console.log)
+      });
+    </script>
+  </body>
+</html>
